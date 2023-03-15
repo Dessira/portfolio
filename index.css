@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "Poppins";
+}
+#full-body{
+    width: 100%;
+    background-color: #222831;
+    height: 4096px;
+    display:flex;
+    flex-direction: column;
+}
+.top-container{
+    width: 100%;
+    height: 990px;
+    border-bottom: solid 0.5px #EEEEEE;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 0.5px white;
+    align-items: center;
+}
+.logo{
+    margin-left: 96px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #EEEEEE;
+}
+#details{
+    margin-right: 96px;
+    width: 502px;
+    height: 123px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #EEEEEE;
+}
+.main-top{
+    height: 892px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.arrow1{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.left-section{
+    width: 45%;
+    height: 287px;
+    margin-top: 202px;
+    display: flex;
+}
+h1{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    color: #EEEEEE;
+}
+.top-btns-container{
+    width: 383px;
+    height: 47px;
+    margin-top: 40px;
+}
+.btn-hire{
+    width: 136px;
+    height: 47px;
+    background-color: #00ADB5;
+    padding: 10px 32px;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #EEEEEE;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.btn-cv-down{
+    width: 223px;
+    height: 47px;
+    padding: 10px 32px;
+    background-color: rgba(57, 62, 70, 0.75);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #EEEEEE;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.right-section{
+    margin-left: 5%;
+    margin-right: 79px;
+    margin-top: 150px;
+    width: 39%;
+    height: 514px;
+    background-image: url("doodles_round.svg");
+}
+.over{
+
+    margin-top: 200px;
+    position: relative;
+    margin-left: -50px;
+}
+.about-me{
+    width: 100%;
+    height: 1024px;
+    border-bottom: solid 0.5px #EEEEEE;
+    display: flex;
+    flex-direction: row;
+}
+.bio{
+    font-size: 17px;
+}
+.about-left{
+ 
+    height: 670px;
+    width: 37%;
+    margin-left: 5%;
+    top: 352px;
+    margin-top: 135px;
+}
+.about-right{
+    height: 499px;
+    width: 50%;
+    margin-left: 7%;
+    margin-top: 230px;
+    border-radius: 0px;
+    background-image: url("doodle\ items-about.svg");
+}
+.person-about{
+    width: 80%;
+    margin-top: 240px;
+    margin-left: 17%;
+}
+.about-top{
+    display: flex;
+    flex-direction: row;
+}
+.light{
+    align-self: center;
+    font-weight: 700;
+}
+.proj-btn{
+    background-color: #00ADB5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.project-section{
+    width: 100%;
+    height: 1024px;
+    background-image: url("doodleitems-project.svg");
+}
+.proj-top{
+    height: 159px;
+    width: 45%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+.project-container{
+    position: absolute;
+    height: 487px;
+    width: 85%;
+    border-radius: 0px;
+    margin-left: 10%;
+    margin-top: 268px;
+}
+.project{
+    height: 280px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.project-img {
+    position: absolute;
+    height: 158px;
+    width: 20%;
+    border-radius: 0px;
+    background-color: pink;
+}
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 1024px;
+}
+
+.left-contact {
+    padding: 30px;
+    position: relative;
+}
+
+.left-contact h2 {
+    font-size: 50px;
+    width: 70%;
+    margin: 170px auto auto 30px;
+}
+
+#arrow {
+    position: absolute;
+    top: 450px;
+    left: 10%;
+}
+
+#group {
+    margin-left: 8%;
+    position: absolute;
+    right: 22%;
+}
+
+form {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px 280px 40px;
+    gap: 15px;
+    padding: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    padding: 10px 0;
+}
+
+#keyboard {
+    margin: 60px 0 0 40px;
+    margin-left: 10%;
+}
+
+form div input,
+.inputs textarea {
+    height: 100%;
+    border-radius: 16px;
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: .7;
+}
+
+.inputs {
+    grid-area: 2/1/span 1/span 2;
+}
+
+.inputs textarea {
+    padding-top: 10px;
+}
+
+form button {
+    width: 70%;
+    border-radius: 20px;
+    background-color: #00ADB5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+form button img {
+    margin-left: 10px;
+}
+
+#mail {
+    margin-left: 60%;
+}
+.footer-section{
+    height: 300px;
+    border-top: 1px solid white;
+    background-color: #222831;
+} 
+@media only screen and (max-width: 700px){
+    h1{
+        margin-top: 20px;
+        font-size: 50px;
+        line-height: 60px;
+        color: #EEEEEE;
+    }
+    .main-top{
+        flex-direction: column;
+        width: 100%;
+    }
+    .right-section, .left-section{
+        margin-top: 0px;
+ 
+        width: 100%;
+    }
+    .right-section{
+        width: 95%;
+        margin-top: -80px;
+        margin-left: 0px;
+
+    }
+    .arrow1{
+        height: 200px;
+    }
+    .btn-hire{
+        width: 110px;
+        height: 40px;
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+    .btn-cv-down{
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+    .over{
+        
+    margin-top: 70px;
+    position: relative;
+    margin-left: 40px;
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr;
+    }
+    p{
+        font-size: 13px;
+    }
+    #arrow, #group{
+        display: none;
+    }
+    .left-contact h2{
+        margin: auto;
+        font-size: 35px;
+    }
+    
+}
