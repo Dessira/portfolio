@@ -1,364 +1,443 @@
-*{
+:root {
+    --primary: rgb(34, 40, 49);
+    --secondary: rgb(0, 173, 181);
+    --tertiary: #fff;
+    --gray: #444;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+*,
+*::before,
+*::after {
+    text-decoration: none;
     padding: 0;
     margin: 0;
-    color: white;
     font-family: "Poppins";
+    color: var(--tertiary);
+    box-sizing: border-box;
 }
-#full-body{
-    width: 100%;
-    background-color: #222831;
-    height: 4096px;
-    display:flex;
-    flex-direction: column;
-}
-.top-container{
-    width: 100%;
-    height: 990px;
-    border-bottom: solid 0.5px #EEEEEE;
-}
-.header-container{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-    border-bottom: solid 0.5px white;
-    align-items: center;
-}
-.logo{
-    margin-left: 96px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    color: #EEEEEE;
-}
-#details{
-    margin-right: 96px;
-    width: 502px;
-    height: 123px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: #EEEEEE;
-}
-.main-top{
-    height: 892px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.arrow1{
-    margin-top: 40px;
-    margin-left: 40px;
-}
-.left-section{
-    width: 45%;
-    height: 287px;
-    margin-top: 202px;
-    display: flex;
-}
-h1{
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 96px;
-    line-height: 96px;
-    color: #EEEEEE;
-}
-.top-btns-container{
-    width: 383px;
-    height: 47px;
-    margin-top: 40px;
-}
-.btn-hire{
-    width: 136px;
-    height: 47px;
-    background-color: #00ADB5;
-    padding: 10px 32px;
-    border-radius: 24px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
-    color: #EEEEEE;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-.btn-cv-down{
-    width: 223px;
-    height: 47px;
-    padding: 10px 32px;
-    background-color: rgba(57, 62, 70, 0.75);
-    backdrop-filter: blur(2px);
-    border-radius: 24px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
-    color: #EEEEEE;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-.right-section{
-    margin-left: 5%;
-    margin-right: 79px;
-    margin-top: 150px;
-    width: 39%;
-    height: 514px;
-    background-image: url("doodles_round.svg");
-}
-.over{
 
-    margin-top: 200px;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 2px solid var(--gray);
+}
+
+nav a {
+    padding-left: 20px;
+}
+
+#toggle {
     position: relative;
-    margin-left: -50px;
+    width: 40px;
+    height: 40px;
+    display: none;
 }
-.about-me{
-    width: 100%;
-    height: 1024px;
-    border-bottom: solid 0.5px #EEEEEE;
-    display: flex;
-    flex-direction: row;
-}
-.bio{
-    font-size: 17px;
-}
-.about-left{
- 
-    height: 670px;
-    width: 37%;
-    margin-left: 5%;
-    top: 352px;
-    margin-top: 135px;
-}
-.about-right{
-    height: 499px;
-    width: 50%;
-    margin-left: 7%;
-    margin-top: 230px;
-    border-radius: 0px;
-    background-image: url("doodle\ items-about.svg");
-}
-.person-about{
-    width: 80%;
-    margin-top: 240px;
-    margin-left: 17%;
-}
-.about-top{
-    display: flex;
-    flex-direction: row;
-}
-.light{
-    align-self: center;
-    font-weight: 700;
-}
-.proj-btn{
-    background-color: #00ADB5;
-    padding: 10px;
-    border-radius: 5px;
-}
-.project-section{
-    width: 100%;
-    height: 1024px;
-    background-image: url("doodleitems-project.svg");
-}
-.proj-top{
-    height: 159px;
-    width: 45%;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 20px;
-}
-.project-container{
+
+#toggle div {
     position: absolute;
-    height: 487px;
-    width: 85%;
-    border-radius: 0px;
-    margin-left: 10%;
-    margin-top: 268px;
+    width: 40px;
+    height: 40px;
+    transition: .3s ease;
 }
-.project{
-    height: 280px;
-    width: 30%;
+
+#toggle div img {
+    width: 100%;
+}
+
+.open {
+    opacity: 1;
+    z-index: 1;
+}
+
+.close {
+    opacity: 0;
+    z-index: 0;
+}
+
+
+#pop-up {
+    position: fixed;
+    display: grid;
+    background-color: rgba(34, 40, 49, .9);
+    right: -1000px;
+    top: 90px;
+    grid-template-columns: 1fr;
+    width: 150px;
+    padding: 10px;
+    border: 3px solid var(--gray);
+    border-radius: 20px;
+    scale: 0;
+    z-index: 10;
+    transition: .8s;
+}
+
+#pop-up a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px;
+    border-bottom: 2px solid var(--gray);
+}
+
+.left-section {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow1 {
+    align-self: flex-start;
+    padding-top: 0px;
+}
+
+.right-section {
+    background-image: url('./assets/doodles_round.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    padding-top: 170px;
+}
+
+.right-section img {
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 70px;
+}
+
+h1 span {
+    color: var(--secondary);
+    margin: 0;
+    display: block;
+}
+
+.btn-hire,
+.btn-cv {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.btn-cv {
+    margin-left: 30px;
+    background-color: var(--gray);
+}
+
+.right-section > div {
+    width: 60%;
+    margin: auto;
+}
+
+.about-me {
+    position: relative;
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    padding: 60px;
+}
+
+.about-top {
+    display: flex;
+    width: 80%;
+    min-width: 300px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.light {
+    font-size: 60px;
+}
+
+.light span {
+    color: var(--secondary);
+}
+
+#education {
+    font-size: 40px;
+    padding: 15px 0;
+}
+
+.school {
+    border: 2px solid var(--tertiary);
+    margin-bottom: 20px;
+    padding: 10px;
+    color: red;
+    border-radius: 15px;
+}
+
+.school * {
+    margin-bottom: 10px;
+}
+
+.about-right {
+    position: relative;
+    background-image: url('./assets/doodle\ items-about.svg');
+}
+
+.about-right > div {
+    position: absolute;
+    width: 60%;
+    min-width: 400px;
+    margin: auto;
+    bottom: 0px;
+    left: 20%;
+}
+
+.about-right > div img {
+    width: 100%;
+}
+
+.project-section {
+    padding: 140px 60px;
+    border-top: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
+    background-image: url('./assets/doodleitems-project.svg');
+}
+
+.proj-top div {
+    margin: 20px 0;
+}
+
+.proj-top h2 {
+    margin-bottom: 20px;
+}
+
+.proj-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    border: 1px solid var(--gray);
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 230px));
+    gap: 10px;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.project p {
+    text-align: center;
+    padding: 10px;
+}
+
+.project-img {
+    width: 90%;
+    margin: auto;
+    height: 150px;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: inherit;
+}
+
+.project-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #EEEEEE;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
+    gap: 20px;
 }
-.project-img {
-    position: absolute;
-    height: 158px;
-    width: 20%;
-    border-radius: 0px;
-    background-color: pink;
+
+.project-links div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.projects{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+.project-links div img {
+    width: 100%;
 }
 
 .contact-section {
+    padding: 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 1024px;
-}
-
-.left-contact {
-    padding: 30px;
-    position: relative;
-}
-
-.left-contact h2 {
-    font-size: 50px;
-    width: 70%;
-    margin: 170px auto auto 30px;
-}
-
-#arrow {
-    position: absolute;
-    top: 450px;
-    left: 10%;
-}
-
-#group {
-    margin-left: 8%;
-    position: absolute;
-    right: 22%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 form {
-    width: 80%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80px 280px 40px;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    padding: 20px;
+    padding: 10px;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 8px;
 }
 
 form div label {
-    padding: 10px 0;
-}
-
-#keyboard {
-    margin: 60px 0 0 40px;
-    margin-left: 10%;
+    font-size: 16px;
 }
 
 form div input,
-.inputs textarea {
-    height: 100%;
-    border-radius: 16px;
-    padding-left: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
+textarea,
+form button {
+    padding: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 15px;
+    outline: none;
+    width: 100%;
+    min-width: 0px;
+    background-color: rgba(255, 255, 255, .2);
 }
 
-::placeholder {
-    color: #fff;
-    opacity: .7;
+form div:nth-child(3) {
+    grid-column: 1/span 3;
 }
 
-.inputs {
-    grid-area: 2/1/span 1/span 2;
-}
-
-.inputs textarea {
-    padding-top: 10px;
+textarea {
+    height: 250px;
 }
 
 form button {
-    width: 70%;
-    border-radius: 20px;
-    background-color: #00ADB5;
+    grid-column: 1/span 1;
+    padding: 10px;
+    background-color: var(--secondary);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+
+
+
+footer {
+    padding: 15px
+}
+
+footer div {
     display: flex;
     align-items: center;
+    gap: 15px;
     justify-content: center;
-    border: none;
 }
 
-form button img {
-    margin-left: 10px;
+footer div > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .4s ease;
 }
 
-#mail {
-    margin-left: 60%;
+footer div > div img {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
 }
-.footer-section{
-    height: 300px;
-    border-top: 1px solid white;
-    background-color: #222831;
-} 
-@media only screen and (max-width: 700px){
-    h1{
-        margin-top: 20px;
-        font-size: 50px;
-        line-height: 60px;
-        color: #EEEEEE;
-    }
-    .main-top{
-        flex-direction: column;
-        width: 100%;
-    }
-    .right-section, .left-section{
-        margin-top: 0px;
- 
-        width: 100%;
-    }
-    .right-section{
-        width: 95%;
-        margin-top: -80px;
-        margin-left: 0px;
 
-    }
-    .arrow1{
-        height: 200px;
-    }
-    .btn-hire{
-        width: 110px;
-        height: 40px;
-        font-size: 12px;
-        padding: 5px 20px;
-    }
-    .btn-cv-down{
-        width: 150px;
-        height: 40px;
-        font-size: 12px;
-        padding: 5px 20px;
-    }
-    .over{
-        
-    margin-top: 70px;
-    position: relative;
-    margin-left: 40px;
-    }
-    .contact-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: .1fr 1fr;
-    }
-    p{
-        font-size: 13px;
-    }
-    #arrow, #group{
+footer div > div:hover {
+    transform: translateY(-10px);
+}
+
+footer > div div a {
+    width: inherit;
+    height: inherit;
+}
+
+footer p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
         display: none;
     }
-    .left-contact h2{
-        margin: auto;
-        font-size: 35px;
+
+    #toggle {
+        display: block;
     }
-    
+    .left-section {
+        margin-top: 30px;
+    }
+    .arrow1{
+        height: 70%;
+    }
+    .btn-cv,
+    .btn-hire {
+        font-size: 12px;
+    }
+
+    .left-contact h2 {
+        margin-bottom: 30px;
+    }
+
+    #arrow {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .main-top {
+        padding: 50px 10px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+
+    .arrow1 {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 852px) {
+    .about-me {
+        position: relative;
+        display: block;
+        margin-bottom: 140px;
+    }
+
+    .about-right {
+        width: 100%;
+       height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .about-right div {
+        min-width: 200px;
+    }
+
+    .about-right div img {
+        position: relative;
+        margin-left: 20%;
+    }
+
+    .school {
+        background-image: linear-gradient(-45deg,  rgba(34, 40, 49, .4),  rgba(0, 173, 181, .4)
+        );
+    }
 }
